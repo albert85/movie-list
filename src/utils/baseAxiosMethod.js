@@ -7,7 +7,7 @@ const baseAxiosMethod = axios.create({})
 baseAxiosMethod.interceptors.request.use(
   config => {
     // Add authorization key to config object if it exist
-    return asyncLocalStorage.getItem('token').then(function (token) {
+    return asyncLocalStorage.getItem('@userToken').then(function (token) {
       if (token) {
         config.headers.common.Authorization = `Bearer ${token}`
       }

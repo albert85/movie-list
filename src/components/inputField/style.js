@@ -5,11 +5,11 @@ export const CustomFieldContainer = styled.input`
   min-height: 30px;
   border-radius: 5px;
   border: 1px solid #a29d9d;
-  margin-bottom: 20px;
   padding-left: 6px;
 `;
 
 export const CustomInputFieldWrapper = styled.div`
+margin-bottom: 20px;
 p {
   font-size: 14px;
   margin: 0;

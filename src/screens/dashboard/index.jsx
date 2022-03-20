@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import { useQuery } from 'react-query';
 import CustomButton from '../../components/Buttons';
 import { PageAppTitle } from '../../components/helper/style';
@@ -8,7 +9,6 @@ import { MovieCardListWrapper, MovieInfo, MovieInfoItemWrapper } from './style';
 import { queryKeys } from '../../utils/queryKey';
 import { GET_MOVIE_LIST } from '../../utils/apilUrl';
 import { SpinnerCircular } from 'spinners-react';
-import { toast } from 'react-toastify';
 
 const Dashboard = () => {
   const { data, isLoading } = useQuery(queryKeys.getMovieList, async () => {

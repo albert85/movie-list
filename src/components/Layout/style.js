@@ -11,14 +11,12 @@ export const LayoutSideNav = styled.div`
   width: 20%;
   min-width: 300px;
   height: 100%;
-  position: fixed;
   background-color: #212C4E;
   padding-top: 60px;
   `;
   
   export const LayoutContent = styled.div`
   width: 100%;
-  margin-left: 20%;
   min-width: 300px;
   height: 100%;
   padding-left: 30px;

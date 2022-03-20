@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useQuery } from 'react-query';
 import CustomButton from '../../components/Buttons';
 import { PageAppTitle } from '../../components/helper/style';
@@ -6,13 +6,11 @@ import AppLayout from '../../components/Layout';
 import MovieCard from '../../components/MovieCard';
 import { MovieCardListWrapper, MovieInfo, MovieInfoItemWrapper } from './style';
 import { queryKeys } from '../../utils/queryKey';
-import { GET_MOVIE_LIST } from '../../utils/apilUrl';
+import { GET_FAVORITE_LIST } from '../../utils/apilUrl';
+import { getRequest } from '../../utils/apiCall';
 
 const Favorites = () => {
-  const { data } = useQuery(queryKeys.getFavoriteList, async () => {
-    const res = await fetch(GET_MOVIE_LIST);
-    return res.json();
-  });
+  const { data } = useQuery(queryKeys.getFavoriteList, async () => getRequest({ url: GET_FAVORITE_LIST }));
 
   const RenderMovieInfo = ({ title, value }) => {
     return (
