@@ -8,6 +8,7 @@ import {
   QueryClientProvider,
 } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import Favorites from './screens/favorites';
 
 const queryClient = new QueryClient()
 
@@ -21,7 +22,7 @@ function App() {
               <Route exact path='/' element={<Login />} />
               <Route exact path='/register' element={<Registration />} />
               <Route exact path='/dashboard' element={<Dashboard />} />
-              <Route exact path='/my-movie-list' element={<Login />} />
+              <Route exact path='/favorites' element={<Favorites />} />
             </Switch>
           </Router>
      <ReactQueryDevtools initialIsOpen={false} />

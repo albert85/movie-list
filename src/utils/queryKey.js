@@ -1,3 +1,4 @@
 export const queryKeys = {
-getMovieList: 'getMovieList'
+  getMovieList: 'getMovieList',
+  getFavoriteList: 'getFavoriteList'
 }

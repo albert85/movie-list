@@ -8,8 +8,8 @@ import { MovieCardListWrapper, MovieInfo, MovieInfoItemWrapper } from './style';
 import { queryKeys } from '../../utils/queryKey';
 import { GET_MOVIE_LIST } from '../../utils/apilUrl';
 
-const Dashboard = () => {
-  const { data } = useQuery(queryKeys.getMovieList, async () => {
+const Favorites = () => {
+  const { data } = useQuery(queryKeys.getFavoriteList, async () => {
     const res = await fetch(GET_MOVIE_LIST);
     return res.json();
   });
@@ -24,7 +24,7 @@ const Dashboard = () => {
   };
   return (
     <div>
-      <PageAppTitle>MOVIES</PageAppTitle>
+      <PageAppTitle>FAVORITES</PageAppTitle>
       <MovieCardListWrapper>
       {data?.Search?.map((movie) => {
         return (
@@ -43,7 +43,7 @@ const Dashboard = () => {
 };
 
 const DashbordPage = (props) => {
-  return <Dashboard {...props} />;
+  return <Favorites {...props} />;
 };
 
 export default AppLayout(DashbordPage);
