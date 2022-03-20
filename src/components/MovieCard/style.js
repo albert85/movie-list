@@ -9,7 +9,8 @@ export const PosterWrapper = styled.div`
 `;
 
 export const MovieWrapper = styled.div`
-  width: 200px;
+  width: 250px;
+  height: 350px;
   background: rgba(32, 40, 62, 0.8);
   backdrop-filter: blur(80px);
   border-radius: 12px;
@@ -23,7 +24,7 @@ padding: 10px;
 
 
 export const CardWrapper = styled.div`
-  flex: 0 1 20%;
+  flex: 0 1 25%;
   margin-bottom: 12px;
   .movie-class:hover {
     box-shadow: 1px 2px 6px #e1dbdb;

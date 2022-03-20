@@ -11,13 +11,14 @@ export const LayoutSideNav = styled.div`
   width: 20%;
   min-width: 300px;
   height: 100%;
+  position: fixed;
   background-color: #212C4E;
   padding-top: 60px;
-  padding-left: 20px;
   `;
   
   export const LayoutContent = styled.div`
   width: 100%;
+  margin-left: 20%;
   min-width: 300px;
   height: 100%;
   padding-left: 30px;
@@ -34,8 +35,13 @@ export const MenuTitle = styled.p`
 export const MenuContainer = styled.div`
   display: flex;
   align-items: center;
+  padding: 10px;
+  cursor: pointer;
 
   p {
     padding-left: 10px;
   }
+
+  border-left: ${({ active }) => active === 'true' ? "5px solid #FFAD49" : 'none'};
+  background: ${({ active }) => active === 'true' ? "rgba(235, 228, 228, 0.22)" : 'transparent'};
 `;

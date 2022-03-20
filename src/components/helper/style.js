@@ -30,3 +30,8 @@ export const PageWrapper = styled.div`
     font-size: 18px;
     font-weight: bold;
   `;
+
+  export const PageAppTitle = styled.p`
+    font-size: 20px;
+    color: white;
+  `;
