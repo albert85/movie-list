@@ -9,6 +9,8 @@ import {
 } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import Favorites from './screens/favorites';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const queryClient = new QueryClient()
 
@@ -26,6 +28,7 @@ function App() {
             </Switch>
           </Router>
      <ReactQueryDevtools initialIsOpen={false} />
+     <ToastContainer />
        </QueryClientProvider>
      
     </div>
