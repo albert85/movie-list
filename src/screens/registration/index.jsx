@@ -1,24 +1,26 @@
 import React from 'react';
-import { RegisterInfo } from './style';
 import { FormWrapper, PageTitle, PageWrapper } from '../../components/helper/style';
 import CustomField from '../../components/inputField';
 import CustomButton from '../../components/Buttons';
+import { RegisterInfo } from '../login/style';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Registration = () => {
   return (
     <PageWrapper>
       <FormWrapper>
-        <PageTitle>Login</PageTitle>
+        <PageTitle>Registration</PageTitle>
         <form>
+        <CustomField title="First Name" required type="text" />
+          <CustomField title="Last Name" required type="text" />
           <CustomField title="Email" required type="email" />
           <CustomField title="Password" required type="password" />
-          <CustomButton label="Login" type="submit" />
+          <CustomButton label="Register" type="submit" />
         </form>
-        <RegisterInfo>Don't have an account? <Link to='/register'>Signup</Link></RegisterInfo>
+        <RegisterInfo>Already have an account? <Link to='/'>Login</Link></RegisterInfo>
       </FormWrapper>
     </PageWrapper>
   );
 };
 
-export default Login;
+export default Registration;

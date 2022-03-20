@@ -12,6 +12,7 @@ export const PageWrapper = styled.div`
     background-size: cover;
     margin: 0;
     padding: 0;
+    
   `;
 
   export const FormWrapper = styled.div`
