@@ -8,5 +8,6 @@ export const ButtonWrapper = styled.button`
   background-color: ${({ bgColor }) => bgColor};
   color: ${({ color }) => color};
   border: none;
-  height: ${({ height }) => height}
+  height: ${({ height }) => height};
+  cursor: pointer;
 `;

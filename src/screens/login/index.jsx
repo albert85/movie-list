@@ -1,7 +1,7 @@
 import React from 'react';
 import { RegisterInfo } from './style';
 import { FormWrapper, PageTitle, PageWrapper } from '../../components/helper/style';
-import CustomField from '../../components/inputField';
+import CustomField from '../../components/InputField';
 import CustomButton from '../../components/Buttons';
 import { Link } from 'react-router-dom';
 
