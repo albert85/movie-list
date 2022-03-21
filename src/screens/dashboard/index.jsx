@@ -19,7 +19,6 @@ const Dashboard = () => {
 
   const mutate = useMutation(postRequest, {
     onSuccess(res) {
-      console.log(res);
       toast.success(res.message);
     },
     onError(err) {
