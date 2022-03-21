@@ -21,6 +21,14 @@ const SideBarNav = () => {
           <MenuTitle color="white">Favorites</MenuTitle>
         </MenuContainer>
       </Link>
+      <Link to='/' onClick={()=> {
+        localStorage.clear();
+      }}>
+        <MenuContainer>
+          <FavoriteIcon fill= {pathname.includes('/favorites') ? '#FFAD49' : 'transparent' } />
+          <MenuTitle color="white">Logout</MenuTitle>
+        </MenuContainer>
+      </Link>
     </LayoutSideNav>
   )
 }

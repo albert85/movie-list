@@ -43,7 +43,6 @@ const Registration = () => {
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              console.log(values);
               mutate.mutate({ url: REGISTER_USER, data: values });
               setSubmitting(false);
             }, 400);
