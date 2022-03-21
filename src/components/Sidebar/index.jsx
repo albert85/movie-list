@@ -3,6 +3,7 @@ import { LayoutSideNav, MenuTitle } from '../Layout/style'
 import { MenuContainer } from '../Layout/style';
 import {ReactComponent as HomeIcon} from '../../assets/home_icon.svg';
 import {ReactComponent as FavoriteIcon} from '../../assets/favorites.svg';
+import {ReactComponent as LogoutIcon} from '../../assets/logout.svg';
 import { Link, useLocation } from 'react-router-dom';
 
 const SideBarNav = () => {
@@ -25,7 +26,7 @@ const SideBarNav = () => {
         localStorage.clear();
       }}>
         <MenuContainer>
-          <FavoriteIcon fill= {pathname.includes('/favorites') ? '#FFAD49' : 'transparent' } />
+          <LogoutIcon />
           <MenuTitle color="white">Logout</MenuTitle>
         </MenuContainer>
       </Link>
